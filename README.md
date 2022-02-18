@@ -1,17 +1,14 @@
-# bitmap-transformer
-
 # Bitmap Transformer
-
 
 ## Overview
 
 In this paired lab, you will work with a partner to build a bitmap transformer CLI.
 
-## Resources
+### Resources
 
 - Bitmap Specification
 
-## Setup
+### Setup
 
 - Create a new repo called bitmap-transformer for this paired lab, and ensure you’ve added your partner as a collaborator. Create a new Java application by running gradle init --type java-application.
 
@@ -38,7 +35,7 @@ For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It w
 
 You will want to define a strategy for solving the problem before you begin to code. Once you have a strategy defined, you can break it into steps that can be split into helper methods. Each helper method should solve a small specific problem. The main method should utilize the helper modules to execute your original strategy.
 
-**Example Strategy**
+#### **Example Strategy**
 
 1. Gather user input (infile, outfile, and transform)
 2. Read the input bitmap file
@@ -46,7 +43,7 @@ You will want to define a strategy for solving the problem before you begin to c
 4. Using data from the parsed Bitmap, run a transform on the data directly (mutate the color or similar)
 5. Write the mutated image data to the output file path
 
-**Transform Ideas**
+#### **Transform Ideas**
 
 #### **Color Pallet Transforms**
 
@@ -69,3 +66,16 @@ You will want to define a strategy for solving the problem before you begin to c
 #### Documentation
 
 - Describe the transforms your program supports in README.md.
+
+
+#### Collab, Credit and References
+
+- Paired Programmed: Tony Regalado and Josh McCluskey
+
+[Writing/Saving an Image](https://docs.oracle.com/javase/tutorial/2d/images/saveimage.html)
+[Read and Write an Image](https://mkyong.com/java/how-to-write-an-image-to-file-imageio/)
+[BufferedImage: Get RGB Values](https://alvinalexander.com/blog/post/java/getting-rgb-values-for-each-pixel-in-image-using-java-bufferedi/)
+[Class ImageIO](https://docs.oracle.com/javase/7/docs/api/javax/imageio/ImageIO.html)
+[Class Color](https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html)
+[Class ImageIO](https://docs.oracle.com/javase/7/docs/api/javax/imageio/ImageIO.html)
+[StackOverflow](https://stackoverflow.com/questions/16475482/how-can-i-load-a-bitmap-image-and-manipulate-individual-pixels)
