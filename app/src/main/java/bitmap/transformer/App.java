@@ -3,12 +3,38 @@
  */
 package bitmap.transformer;
 
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+
+    public static void main(String[] args) throws IOException {
+        BufferedImage img = ImageIO.read(new File("/Users/joshuamccluskey/projects/courses/401/java-fundamentals/bitmap-transformer/app/src/main/assets/baldy-8bit.bmp"));
+        Bitmap newImg = new Bitmap("hello", "world", "image");
+
+        int width = img.getWidth();
+        int height = img.getHeight();
+        for (int i = 0; i < width ; i++) {
+            for (int j = 0; j < height; j++){
+                Color color = new Color (img.getRGB(i, j));
+                int red = (int)(color.getRed() * 0.3);
+                int green = (int)(color.getGreen() * 0.6) ;
+                int blue = (int)(color.getBlue() * 0.1) ;
+                Color newColors =  new Color (red+green+blue, red+green+blue, red+green+blue);
+                img.setRGB(i,j, newColors.getRGB());
+
+
+            }
+        }
+
+        ImageIO.write( img, "bmp" , new  File("/Users/joshuamccluskey/projects/courses/401/java-fundamentals/bitmap-transformer/app/src/main/assets/copy-baldy-8bit.bmp"));
+        //
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+
+
 }
