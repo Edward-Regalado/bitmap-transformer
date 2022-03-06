@@ -2,6 +2,11 @@
 
 ## Overview
 
+Build and run with args app/src/main/assets/baldy-8bit.bmp app/src/main/assets/ bitty:
+- args[0] filePath of input image;
+- args[1]filePath of output image;
+- args[2]filename of output image;
+
 In this paired lab, you will work with a partner to build a bitmap transformer CLI.
 
 ### Resources
@@ -85,7 +90,7 @@ You will want to define a strategy for solving the problem before you begin to c
 Included
 - args[0] filePath of input image; 
 - args[1]filePath of output image; 
-- args[2]filename of output image
+- args[2]filename of output image;
 - App runs from command line
 - Tests Built for all methods
 
