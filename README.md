@@ -79,3 +79,16 @@ You will want to define a strategy for solving the problem before you begin to c
 [Class Color](https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html)
 [Class ImageIO](https://docs.oracle.com/javase/7/docs/api/javax/imageio/ImageIO.html)
 [StackOverflow](https://stackoverflow.com/questions/16475482/how-can-i-load-a-bitmap-image-and-manipulate-individual-pixels)
+
+### Refactor 03/05/2022 11:50PM
+
+Included
+- args[0] filePath of input image; 
+- args[1]filePath of output image; 
+- args[2]filename of output image
+- App runs from command line
+- Tests Built for all methods
+
+User input feature maintained and commented out for assignment.
+
+Work Time: 2 Hours 
