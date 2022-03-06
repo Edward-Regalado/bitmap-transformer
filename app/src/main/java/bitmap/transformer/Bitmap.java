@@ -24,9 +24,9 @@ public class Bitmap {
         return  "Img{" + "input=" + input + ", name=" + name + ", output=" + output + "}";
     }
 
-    public void grayScale (BufferedImage img) throws IOException {
+    public void grayScale (BufferedImage img,String outPutPath, String fileName) throws IOException {
 
-        String outputPath;
+//        String outputPath ; //This is for our user console input feature
         Scanner filePath = new Scanner(System.in);
         int width = img.getWidth();
         int height = img.getHeight();
@@ -40,15 +40,14 @@ public class Bitmap {
                 img.setRGB(i, j, newColors.getRGB());
             }
         }
-        System.out.println("Please enter a filename for your grayScale image");
-        outputPath = filePath.nextLine();
-        String fileName = "app/src/main/assets/"+ outputPath + ".bmp";
-        ImageIO.write( img, "bmp" , new  File(fileName));
+//        System.out.println("Please enter a filename for your grayScale image"); //This is for our user console input feature
+//        outputPath = filePath.nextLine(); //This is for our user console input feature
+        String pathFile = outPutPath + fileName + "grayscale.bmp";
+        ImageIO.write( img, "bmp" , new  File(pathFile));
 
     }
-    public void darken (BufferedImage img, double percentage) throws IOException {
-
-        String outputPath;
+    public void darken (BufferedImage img, String outPutPath, String fileName, double percentage) throws IOException {
+//        String outputPath; //This is for our user console input feature
         Scanner filePath = new Scanner(System.in);
         int width = img.getWidth();
         int height = img.getHeight();
@@ -64,15 +63,15 @@ public class Bitmap {
                 wr.setPixel(i, j, pixel);
             }
         }
-        System.out.println("Please enter a filename for your dark image");
-        outputPath = filePath.nextLine();
-        String fileName = "app/src/main/assets/"+ outputPath + ".bmp";
-        ImageIO.write(img, "bmp", new File(fileName));
+//        System.out.println("Please enter a filename for your dark image"); //This is for our user console input feature
+//        outputPath = filePath.nextLine(); //This is for our user console input feature
+        String pathFile = outPutPath + fileName + "darken.bmp";
+        ImageIO.write(img, "bmp", new File(pathFile));
     }
 
 
-    public void resizeImage (BufferedImage img, double scaleSize) throws IOException {
-        String outputPath;
+    public void resizeImage (BufferedImage img, String outPutPath, String fileName, double scaleSize) throws IOException {
+//        String outputPath; //This is for our user console input feature
         Scanner filePath = new Scanner(System.in);
 
         int width = (int)(img.getWidth() * scaleSize);
@@ -82,10 +81,10 @@ public class Bitmap {
         g2d.drawImage(img, 0, 0, width, height, null);
         g2d.dispose();
 
-        System.out.println("Please enter a filename for you resized image");
-        outputPath = filePath.nextLine();
-        String fileName = "app/src/main/assets/"+ outputPath + ".bmp";
-        ImageIO.write(img, "bmp", new File(fileName));
+//        System.out.println("Please enter a filename for you resized image");//This is for our user console input feature
+//        outputPath = filePath.nextLine();//This is for our user console input feature
+        String pathFile = outPutPath + fileName + "resize.bmp";
+        ImageIO.write(img, "bmp", new File(pathFile));
     }
 }
 
